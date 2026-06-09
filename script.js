@@ -189,12 +189,19 @@ document.addEventListener('DOMContentLoaded', () => {
             desc: "A mobile-first billing and invoicing solution designed to simplify day-to-day operations for small to medium businesses. It completely automates the sales tracking and invoice generation process.",
             features: "<li>Generate professional PDF invoices instantly.</li><li>Offline-first architecture with SQLite.</li><li>Detailed sales charts and analytics.</li><li>Customer database management.</li>"
         },
-        badminton: {
-            title: "BWS Badminton Application",
-            tech: "<li>Flutter</li><li>REST APIs</li><li>Firebase</li>",
-            image: "assets/badminton_mockup.png",
-            desc: "A dedicated sports management platform that streamlines the complex process of organizing badminton tournaments. From player registration to live score tracking, it provides a centralized hub for coaches, players, and organizers.",
-            features: "<li>Automated tournament bracket generation.</li><li>Live match score tracking.</li><li>Player profile and statistics management.</li><li>Event scheduling and coordination.</li>"
+        crm: {
+            title: "CRM Application",
+            tech: "<li>Flutter</li><li>Web Dashboard</li><li>Analytics</li>",
+            image: "assets/crm_mockup.png",
+            desc: "A powerful Customer Relationship Management platform designed to streamline sales pipelines, manage client interactions, and provide actionable analytics for businesses.",
+            features: "<li>Real-time customer data tracking.</li><li>Interactive sales pipeline visualization.</li><li>Comprehensive reporting and analytics dashboard.</li><li>Cross-platform support (Web & Mobile).</li>"
+        },
+        arvina: {
+            title: "Arvina Hotel Stay",
+            tech: "<li>Flutter</li><li>Booking Engine</li><li>Payment API</li>",
+            image: "assets/arvina_mockup.png",
+            desc: "A premium mobile application for hotel bookings, allowing users to browse luxury rooms, check real-time availability, and securely manage their reservations.",
+            features: "<li>Seamless real-time room availability checking.</li><li>Secure payment gateway integration.</li><li>User-friendly booking management interface.</li><li>Rich media galleries for hotel properties.</li>"
         }
     };
 

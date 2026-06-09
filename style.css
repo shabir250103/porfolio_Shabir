@@ -1,18 +1,18 @@
 :root {
-    /* Custom Theme Palette */
-    --bg-main: #0B0F19;
-    --card-bg: #111827;
-    --card-border: #1F2937;
-    --card-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    --card-shadow-hover: 0 15px 35px rgba(139, 92, 246, 0.15);
+    /* Custom Theme Palette (Maroon & Gold) */
+    --bg-main: #29060A; /* Darker maroon for background contrast */
+    --card-bg: #5B0E14; /* The requested deep maroon */
+    --card-border: #851A22;
+    --card-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    --card-shadow-hover: 0 15px 35px rgba(241, 225, 148, 0.15);
     
-    --text-primary: #FFFFFF;
-    --text-secondary: #9CA3AF;
+    --text-primary: #FAFAFA;
+    --text-secondary: #E2C9BC;
     
-    --accent: #8B5CF6; /* Purple */
-    --accent-secondary: #EC4899; /* Pink */
-    --accent-light: rgba(139, 92, 246, 0.15);
-    --accent-gradient: linear-gradient(135deg, #8B5CF6, #EC4899);
+    --accent: #F1E194; /* The requested pale gold */
+    --accent-secondary: #D4AF37; /* Metallic gold */
+    --accent-light: rgba(241, 225, 148, 0.15);
+    --accent-gradient: linear-gradient(135deg, #F1E194, #D4AF37);
     
     /* Typography */
     --font-heading: 'Archivo', sans-serif;
@@ -128,7 +128,7 @@ h1, h2, h3, h4 {
 .navbar {
     position: fixed; top: 0; width: 100%; z-index: 100;
     padding: 1.5rem 0;
-    background: rgba(11, 15, 25, 0.85);
+    background: rgba(41, 6, 10, 0.85);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--card-border);
 }
@@ -309,7 +309,7 @@ footer { text-align: center; padding: 4rem 2rem; color: var(--text-secondary); b
     
     .nav-links { 
         position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-        background: rgba(11, 15, 25, 0.98);
+        background: rgba(41, 6, 10, 0.98);
         flex-direction: column; justify-content: center; align-items: center;
         gap: 3rem; padding: 0; opacity: 0; pointer-events: none;
         transition: var(--transition); z-index: 1000;

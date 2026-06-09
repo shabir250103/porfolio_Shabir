@@ -459,19 +459,56 @@ footer {
 .delay-2 { transition-delay: 0.2s; }
 .delay-3 { transition-delay: 0.3s; }
 
-/* RESPONSIVE */
+/* --- RESPONSIVE & FLEXIBILITY (MEDIA QUERIES) --- */
+
+/* Laptops / Tablets Landscape (Max 1024px) */
 @media(max-width: 1024px) {
+    .section { padding: 6rem 1.5rem; }
     .bento-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
     .profile-bento { grid-column: span 2; height: 400px; }
     .skills-bento { grid-column: span 2; }
-    .achievements-bento { grid-template-columns: 1fr; }
+    .achievements-bento { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* Tablets Portrait / Large Mobile (Max 768px) */
 @media(max-width: 768px) {
-    .nav-links { display: none; }
-    .bio-bento { grid-column: span 2; }
-    .small-bento { grid-column: span 2; }
-    .form-group.row { flex-direction: column; }
-    .contact-bento { padding: 2rem; }
+    .nav-links { display: none; /* Can be replaced with a hamburger menu later */ }
+    .section { padding: 4rem 1.25rem; }
+    .hero { min-height: 80vh; padding-top: 6rem; }
+    
+    /* Hero adjustments */
+    .name { font-size: 15vw; }
+    .role { font-size: 6vw; flex-wrap: wrap; }
+    .hero-cta { flex-direction: column; width: 100%; }
+    .hero-cta .btn { width: 100%; justify-content: center; }
+
+    /* Bento Grid Mobile */
+    .bento-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .bento-card { padding: 1.5rem; }
+    .profile-bento, .bio-bento, .skills-bento, .small-bento { grid-column: span 1; }
+    .profile-bento { height: 300px; }
+    
+    /* Projects & Achievements Mobile */
+    .projects-grid { grid-template-columns: 1fr; }
+    .achievements-bento { grid-template-columns: 1fr; }
+    
+    /* Contact Mobile */
+    .contact-bento { padding: 1.5rem; }
+    .form-group.row { flex-direction: column; gap: 1rem; }
+    
+    /* Modal Mobile */
+    .modal-content { width: 95%; max-height: 85vh; }
+    .modal-scroll-area { padding: 1.5rem; }
+    .modal-header h2 { font-size: 1.8rem; }
+    .modal-close { top: 0.5rem; right: 0.5rem; }
+}
+
+/* Very Small Mobile Devices (Max 480px) */
+@media(max-width: 480px) {
+    .section-title { font-size: 2.2rem; }
+    .bio-bento h3 { font-size: 1.5rem; }
+    .custom-cursor, .custom-cursor-follower { display: none; /* Disable custom cursor on touch devices */ }
+    * { cursor: auto !important; }
 }
 
 /* --- MODAL (LIGHTBOX) --- */

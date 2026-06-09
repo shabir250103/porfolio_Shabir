@@ -173,7 +173,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     setTimeout(typingEffect, 1500);
 
-    // 6. Project Modal Logic
+    // 6. Scroll Progress Bar
+    const scrollProgress = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+        if(scrollProgress) {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            scrollProgress.style.width = scrolled + "%";
+        }
+    });
+
+    // 7. Project Modal Logic
     const projectData = {
         hrms: {
             title: "Hybrid HRMS Application",

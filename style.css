@@ -42,6 +42,25 @@ body {
     overflow-x: hidden;
 }
 
+/* --- DYNAMIC BACKGROUND & SCROLL PROGRESS --- */
+.scroll-progress {
+    position: fixed; top: 0; left: 0; height: 3px;
+    background: var(--accent-gradient);
+    z-index: 9999; width: 0%; transition: width 0.1s ease;
+    box-shadow: 0 0 10px var(--accent);
+}
+
+.bg-glow {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background: radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.05) 0%, transparent 60%);
+    z-index: -1; animation: pulseGlow 15s infinite alternate;
+}
+
+@keyframes pulseGlow {
+    0% { transform: scale(1); opacity: 0.5; }
+    100% { transform: scale(1.5); opacity: 1; }
+}
+
 /* --- CUSTOM CURSOR --- */
 .custom-cursor {
     position: fixed; width: 6px; height: 6px;
@@ -98,6 +117,22 @@ h1, h2, h3, h4 {
     background: var(--accent-gradient);
     color: #FFF;
     border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::after {
+    content: ''; position: absolute; top: 0; left: -100%;
+    width: 50%; height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent);
+    transform: skewX(-20deg);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    20% { left: 200%; }
+    100% { left: 200%; }
 }
 
 .btn-primary:hover {
@@ -291,7 +326,16 @@ footer { text-align: center; padding: 4rem 2rem; color: var(--text-secondary); b
 /* --- ANIMATIONS --- */
 @keyframes blink { 0%, 100% {opacity:1;} 50% {opacity:0;} }
 
-.reveal-text { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.float-anim {
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.reveal-text { opacity: 0; transform: translateY(30px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
 .reveal-text.active { opacity: 1; transform: translateY(0); }
 .delay-1 { transition-delay: 0.1s; } .delay-2 { transition-delay: 0.2s; } .delay-3 { transition-delay: 0.3s; }
 

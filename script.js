@@ -243,4 +243,36 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = 'auto';
         }
     });
+
+    // 7. Mobile Hamburger Menu Logic
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navLinksContainer = document.getElementById('nav-links');
+    const allNavLinks = document.querySelectorAll('.nav-link, .nav-links .btn');
+
+    if (mobileMenuBtn && navLinksContainer) {
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinksContainer.classList.toggle('active');
+            
+            // Toggle icon
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navLinksContainer.classList.contains('active')) {
+                icon.setAttribute('data-lucide', 'x');
+                document.body.style.overflow = 'hidden'; // Stop scrolling behind menu
+            } else {
+                icon.setAttribute('data-lucide', 'menu');
+                document.body.style.overflow = 'auto';
+            }
+            lucide.createIcons();
+        });
+
+        // Close menu when a link is clicked
+        allNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinksContainer.classList.remove('active');
+                mobileMenuBtn.querySelector('i').setAttribute('data-lucide', 'menu');
+                document.body.style.overflow = 'auto';
+                lucide.createIcons();
+            });
+        });
+    }
 });

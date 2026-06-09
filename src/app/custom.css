@@ -1,7 +1,7 @@
 :root {
     /* Custom Theme Palette (Navy & Cyan/Blue) */
-    --bg-main: #0B1120; /* Darker navy for background contrast */
-    --card-bg: #0F172A; /* The requested Dark Navy */
+    --bg-main: #000000; /* Black background */
+    --card-bg: #050505; /* Deep black for cards */
     --card-border: #1E293B;
     --card-shadow: 0 10px 25px rgba(0,0,0,0.6);
     --card-shadow-hover: 0 15px 35px rgba(6, 182, 212, 0.15);

@@ -360,8 +360,8 @@ export default function Portfolio() {
       </nav>
 
       <main>
-        <header className="hero" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'relative' }}>
-          <div className="hero-content" style={{ flex: 1, zIndex: 10 }}>
+        <header className="hero flex flex-col md:flex-row items-center justify-between relative w-full">
+          <div className="hero-content w-full md:w-1/2 z-10 md:pr-8">
             <p className="greeting reveal-text">Crafting digital experiences.</p>
             <h1 className="name gradient-text reveal-text delay-1">Shabeer.</h1>
             <h2 className="role reveal-text delay-2">I build <span className="typing-text">dynamic solutions</span><span className="cursor"></span></h2>
@@ -373,7 +373,7 @@ export default function Portfolio() {
           </div>
           
           {/* Spline 3D Robot on the right side */}
-          <div className="block spline-wrapper w-full h-[300px] md:h-[600px]" style={{ flex: 1, position: 'relative', zIndex: 5 }}>
+          <div className="block spline-wrapper w-full md:w-1/2 h-[400px] md:h-[600px] relative z-0 md:z-5 mt-8 md:mt-0">
             <SplineScene 
               scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
               className="w-full h-full"

@@ -368,7 +368,7 @@ export default function Portfolio() {
           </div>
           
           {/* Spline 3D Robot on the right side */}
-          <div className="hidden md:block spline-wrapper" style={{ flex: 1, position: 'relative', height: '600px', zIndex: 5 }}>
+          <div className="block spline-wrapper" style={{ flex: 1, position: 'relative', height: '600px', zIndex: 5 }}>
             <SplineScene 
               scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
               className="w-full h-full"
@@ -439,7 +439,7 @@ export default function Portfolio() {
         </section>
 
         <section id="achievements" className="section">
-          <h2 className="section-title gradient-text">Education & Experience</h2>
+          <h2 className="section-title gradient-text">Awards & Achievements</h2>
           <div className="achievements-bento">
             <div className="bento-card tilt-card achievement-card">
               <div className="icon-wrapper float-anim"><Briefcase /></div>

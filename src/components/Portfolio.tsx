@@ -5,8 +5,13 @@ import {
   Briefcase, GraduationCap, ArrowDownRight, Download, Send, 
   Code, Link, Loader2, Check 
 } from 'lucide-react';
-import { SplineScene } from './ui/splite';
 import { Spotlight } from './ui/spotlight';
+import dynamic from 'next/dynamic';
+
+const SplineScene = dynamic(() => import('./ui/splite').then((mod) => mod.SplineScene), {
+  ssr: false,
+  loading: () => <div className="flex items-center justify-center h-full"><Loader2 className="animate-spin text-cyan-500" size={32} /></div>
+});
 
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -368,7 +373,7 @@ export default function Portfolio() {
           </div>
           
           {/* Spline 3D Robot on the right side */}
-          <div className="block spline-wrapper" style={{ flex: 1, position: 'relative', height: '600px', zIndex: 5 }}>
+          <div className="block spline-wrapper w-full h-[300px] md:h-[600px]" style={{ flex: 1, position: 'relative', zIndex: 5 }}>
             <SplineScene 
               scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
               className="w-full h-full"
